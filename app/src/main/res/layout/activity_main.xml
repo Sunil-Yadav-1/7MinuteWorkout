@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@color/black">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -15,19 +16,93 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/app_main_image_height"
             android:layout_margin="@dimen/app_main_image_margin"
+            android:contentDescription="@string/app_image"
             android:src="@drawable/img_main_page"/>
         <LinearLayout
-            android:layout_width="@dimen/startbutton_dimen"
-            android:layout_height="@dimen/startbutton_dimen"
+            android:id="@+id/ll_start"
+            android:layout_width="@dimen/start_button_dimen"
+            android:layout_height="@dimen/start_button_dimen"
             android:gravity="center"
             android:layout_margin="@dimen/app_main_image_margin"
-            android:padding="@dimen/button_padding">
+            android:orientation="vertical"
+            android:padding="@dimen/button_padding"
+            android:background="@drawable/start_button_background_highlighted">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/str_button"
-                android:textSize="@dimen/str_button_size"/>
+                android:textSize="@dimen/str_button_size"
+                android:textColor="@color/white"/>
         </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:baselineAligned="false"
+            android:padding="20dp">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginEnd="45dp"
+                >
+                <LinearLayout
+                    android:id="@+id/ll_BMI"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:gravity = "center"
+                    android:background="@drawable/completion_background">
+                    <TextView
+                        android:id="@+id/tv_BMI"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="BMI"
+                        android:textSize="25sp"
+                        android:textColor="@color/white"/>
+                </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Calculator"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:layout_marginTop="10dp"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginStart="45dp">
+                <LinearLayout
+                    android:id="@+id/ll_history"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:gravity = "center"
+                    android:background="@drawable/completion_background">
+                    <ImageView
+                        android:id="@+id/iv_history"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_calendar"
+                        android:scaleType="fitXY"
+                        />
+                </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="History"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:layout_marginTop="10dp"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

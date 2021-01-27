@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ExerciseActivity"
+    android:background="@color/white"
+    >
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_exercise_activity"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/black"
+        android:theme="@style/toolbar_theme"
+        app:titleTextColor="@color/white" />
+
+    <LinearLayout
+        android:id="@+id/ll_rest"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar_exercise_activity"
+        android:gravity = "center"
+        android:orientation="vertical"
+        android:visibility="visible">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/get_ready_text"
+            android:textColor="@color/CA"
+            android:textSize="@dimen/get_ready_size"
+            android:layout_margin="@dimen/app_main_image_margin"
+            />
+        <FrameLayout
+            android:layout_width="@dimen/frame_layout_size"
+            android:layout_height="@dimen/frame_layout_size"
+            android:background="@drawable/frame_layout_bg"
+
+            >
+            <ProgressBar
+                android:id="@+id/progressbar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/progress_bar_grey"
+                android:indeterminate="false"
+                android:progress="100"
+                android:max="10"
+                android:rotation="-90"
+                android:progressDrawable="@drawable/progress_bar_normal"/>
+            <LinearLayout
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:background="@drawable/start_button_background_highlighted">
+                <TextView
+                    android:id="@+id/timertv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="10"
+                    android:textColor="@color/white"
+                    android:textSize=  "@dimen/timer_text_size"/>
+
+            </LinearLayout>
+
+        </FrameLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/upcoming_exercise"
+            android:textColor="@color/off_white"
+            android:layout_margin="@dimen/app_main_image_margin"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_next_exercise"
+            android:textSize="@dimen/exercise_name_size"
+            android:textColor="@color/black"
+            tools:text="Exercise Name"
+            android:layout_margin="@dimen/app_main_image_margin"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_rest_second"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar_exercise_activity"
+        android:layout_above="@id/rvExerciseStatus"
+        android:gravity = "center"
+        android:orientation="vertical"
+        android:visibility="visible">
+        <ImageView
+            android:id="@+id/image_exercise"
+            android:layout_width ="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scaleType="fitXY"
+            android:contentDescription="@string/app_image"
+            android:src="@drawable/ic_abdominal_crunch"/>
+        <TextView
+            android:id="@+id/tv_exercise_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/exercise_name"
+            android:textColor="@color/CA"
+            android:textSize="@dimen/get_ready_size"
+            android:layout_margin="@dimen/app_main_image_margin"
+            />
+
+        <FrameLayout
+            android:layout_width="@dimen/frame_layout_size"
+            android:layout_height="@dimen/frame_layout_size"
+            android:background="@drawable/frame_layout_bg"
+
+            >
+            <ProgressBar
+                android:id="@+id/progressbar_second"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/progress_bar_grey"
+                android:indeterminate="false"
+                android:progress="100"
+                android:max="30"
+                android:rotation="-90"
+                android:progressDrawable="@drawable/progress_bar_normal"/>
+            <LinearLayout
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:background="@drawable/start_button_background_highlighted">
+                <TextView
+                    android:id="@+id/timertv_second"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="10"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/timer_text_size"/>
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvExerciseStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="5dp"/>
+
+
+
+</RelativeLayout>

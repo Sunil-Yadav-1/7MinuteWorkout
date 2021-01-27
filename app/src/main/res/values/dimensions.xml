@@ -2,7 +2,12 @@
 <resources>
     <dimen name="app_main_image_height">220dp</dimen>
     <dimen name="app_main_image_margin">5dp</dimen>
-    <dimen name="startbutton_dimen">150dp</dimen>
+    <dimen name="start_button_dimen">150dp</dimen>
     <dimen name= "button_padding">5dp</dimen>
     <dimen name="str_button_size">30sp</dimen>
+    <dimen name = "stroke_width">3dp</dimen>
+    <dimen name= "get_ready_size">25sp</dimen>
+    <dimen name = "frame_layout_size">100dp</dimen>
+    <dimen name="timer_text_size">15sp</dimen>
+    <dimen name = "exercise_name_size">20sp</dimen>
 </resources>

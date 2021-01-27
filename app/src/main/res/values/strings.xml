@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">7minute Workout</string>
     <string name="str_button">START</string>
+    <string name="app_image">image</string>
+    <string name="get_ready_text">GET READY</string>
+    <string name="exercise_name">EXERCISE NAME</string>
+    <string name="upcoming_exercise">Upcoming Exercise</string>
 </resources>
