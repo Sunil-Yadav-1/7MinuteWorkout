@@ -21,10 +21,10 @@ import java.util.*
 class ExerciseActivity : AppCompatActivity() , TextToSpeech.OnInitListener{
     private var resttimr : CountDownTimer? = null
     private var exercisetimr : CountDownTimer? = null
-    private val exercise_time : Long = 30000
+    private val exercise_time : Long = 1000
     private var tp_exercise = 0
     private var timepassed  = 0
-    private val totalTime : Long = 10000
+    private val totalTime : Long = 1000
     private var exerciselist = Exercises_Constant.getExerciseList()
     private var exerciseNumber = -1
     private var tts : TextToSpeech? = null
@@ -90,7 +90,7 @@ class ExerciseActivity : AppCompatActivity() , TextToSpeech.OnInitListener{
 
             override fun onFinish() {
                 //if(exerciseNumber>=exerciselist.size -1)
-                if(exerciseNumber>1){
+                if(exerciseNumber>=exerciselist.size -1){
                     exerciselist[exerciseNumber].setisSelected(false)
                     exerciselist[exerciseNumber].setisCompleted(true)
                     exerciseAdapter!!.notifyDataSetChanged()

@@ -3,7 +3,10 @@ package com.example.a7minuteworkout
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
+import androidx.recyclerview.widget.LinearLayoutManager
+import kotlinx.android.synthetic.main.activity_history.*
 import kotlinx.android.synthetic.main.activity_main.*
 
 
@@ -22,6 +25,8 @@ class MainActivity : AppCompatActivity() {
         ll_history.setOnClickListener{
             val intent = Intent(this, HistoryActivity :: class.java)
             startActivity(intent)
+
         }
     }
+
 }
